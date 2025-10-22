@@ -20,24 +20,29 @@ app.use('/contact', contactRoutes);
 
 
 
-const InitializeConnection = async ()=>{
+// const InitializeConnection = async ()=>{
 
-   try {
+//    try {
 
-      await main();
-      console.log('DB connected successfully.')
+//       await main();
+//       console.log('DB connected successfully.')
 
-      app.listen(process.env.PORT, ()=>{
-         console.log('Listening at PORT', process.env.PORT)
-      })
+//       app.listen(process.env.PORT, ()=>{
+//          console.log('Listening at PORT', process.env.PORT)
+//       })
       
-   } catch (error) {
+//    } catch (error) {
 
-      console.log(error.message)
-   }
-}
-
-
-InitializeConnection()
+//       console.log(error.message)
+//    }
+// }
 
 
+// InitializeConnection()
+
+main()
+  .then(() => {
+    console.log('DB connected');
+    app.listen(PORT, () => console.log('Server running on port', PORT));
+  })
+  .catch(err => console.error('DB connection error:', err.message));
