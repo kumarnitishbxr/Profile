@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Send } from "lucide-react";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "../components/SocialIcons";
 import axiosClient from "../API/axiosClient";
+import Header from "../components/Header";
 
-const Contact = () => {
+const Contactpage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null); // { type: 'success'|'error', msg: string }
@@ -39,6 +40,8 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <Header/>
     <section
       id="contact"
       className="py-24 relative bg-gradient-to-b from-gray-900 via-gray-950 to-black overflow-hidden"
@@ -117,7 +120,8 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
-export default Contact;
+export default Contactpage;

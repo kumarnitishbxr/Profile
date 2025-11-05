@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import Header from "../components/Header";
 
 const education = [
   { year: "2020 - 2021", degree: "10th Grade", school: "Sri Ram Janki Saraswati Vidya Niketa Ashram, Buxar, Bihar", percentage: "83.2%" },
@@ -51,10 +52,12 @@ const popupVariant = {
   },
 };
 
-const About = () => {
+const Aboutpage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
+    <>
+    <Header/>
     <section id="about" className="py-20 bg-gray-900 text-white relative">
       <div className="container mx-auto px-6">
         <motion.h2
@@ -197,7 +200,8 @@ const About = () => {
         )}
       </div>
     </section>
+    </>
   );
 };
 
-export default About;
+export default Aboutpage;
