@@ -32,15 +32,7 @@ const semesters = [
   { sem: "Semester 5", sgpa: "Ongoing" },
 ];
 
-const internships = [
-  {
-    company: "IEEE EMBS Student Internship Program 2025",
-    role: "Frontend Developer Intern",
-    duration: "June 2025 - July 2025",
-    description: "Built responsive React apps with Tailwind CSS and optimized performance.",
-    certificate: "/images/skills/intern.jpeg",
-  },
-];
+
 
 const popupVariant = {
   hidden: { opacity: 0, scale: 0.8, y: 40 },
@@ -131,36 +123,7 @@ const Aboutpage = () => {
           </div>
         </div>
 
-        {/* Internships */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <h3 className="text-3xl font-semibold text-center mb-6">Internships</h3>
-          {internships.map((intern, idx) => (
-            <motion.div
-              key={idx}
-              variants={popupVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-gray-800/50 p-6 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/20"
-            >
-              <h4 className="text-xl font-bold">{intern.role}</h4>
-              <p className="text-cyan-400 font-semibold">{intern.company}</p>
-              <p className="text-gray-300 mt-2">{intern.duration}</p>
-              <p className="text-gray-400 mt-2">{intern.description}</p>
-              {intern.certificate && (
-                <div className="mt-4 w-full h-48 cursor-pointer">
-                  <motion.img
-                    src={intern.certificate}
-                    alt="Certificate"
-                    whileHover={{ scale: 1.05 }}
-                    className="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg"
-                    onClick={() => setSelectedImage(intern.certificate)}
-                  />
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
+   
 
         {/* Skills */}
         <div className="max-w-5xl mx-auto">
