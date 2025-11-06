@@ -63,3 +63,4 @@ build
 # Local MongoDB data if you're using it locally
 /data/db
 
+node_modules/
