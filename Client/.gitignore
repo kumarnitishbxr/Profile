@@ -57,3 +57,5 @@ package-lock.json
 .vercel
 .netlify
 .gitignorenode_modules/
+
+.env.production
